@@ -19,7 +19,6 @@ namespace TestProject.Services
         {
             var user = await _db.Users.FirstOrDefaultAsync(u => u.ICNumber == icNumber);
 
-            // UPDATED: Lowercase property names for your exact required JSON format
             if (user == null)
             {
                 return new { existing = false };
@@ -37,7 +36,6 @@ namespace TestProject.Services
         {
             var existingUser = await _db.Users.FirstOrDefaultAsync(u => u.ICNumber == request.ICNumber);
 
-            // Validation for completed accounts
             if (existingUser != null && existingUser.RegistrationStep == 4)
             {
                 throw new Exception("Account already exists. Please login.");
@@ -95,7 +93,7 @@ namespace TestProject.Services
             }
 
             log.IsUsed = true;
-            user.RegistrationStep = 2;  // Flow moves to Step 2
+            user.RegistrationStep = 2;  
             await _db.SaveChangesAsync();
             return true;
         }
@@ -111,7 +109,7 @@ namespace TestProject.Services
 
             user.PinHash = request.Pin;
             user.IsPrivacyAccepted = true;
-            user.RegistrationStep = 4;  // Registration finalized
+            user.RegistrationStep = 4;   
 
             return await _db.SaveChangesAsync() > 0;
         }
