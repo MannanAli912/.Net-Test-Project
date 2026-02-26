@@ -9,11 +9,6 @@
         public string? EmailAddress { get; set; }
         public string? PinHash { get; set; }
         public bool IsPrivacyAccepted { get; set; }
-
-   
-        public bool IsMobileVerified { get; set; } 
-        public bool IsEmailVerified { get; set; }    
-
         public bool IsBiometricEnabled { get; set; }
         public string UserType { get; set; } = "New";  
         public int RegistrationStep { get; set; } = 1;  
