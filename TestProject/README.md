@@ -15,7 +15,6 @@ Professional .NET Web API backend developed for the **Koperasi Tentera** mobile 
 * **Dual Verification**: Mock OTP logic supporting both Mobile and Email verification sequences.
 * **Secure Authentication**: 6-Digit PIN setup with built-in validation for identity protection.
 * **Robust Exception Handling**: Centralized Middleware to handle validation errors (Already Exists, Wrong OTP, etc.).
-* **Biometric Ready**: Entity structure prepared for Biometric activation steps.
 
 ---
 
