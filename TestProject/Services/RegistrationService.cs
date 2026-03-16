@@ -97,7 +97,6 @@ namespace TestProject.Services
             await _db.SaveChangesAsync();
             return true;
         }
-
         public async Task<bool> CompleteRegistration(PinRequest request)
         {
             if (request.Pin != request.ConfirmPin)
