@@ -26,7 +26,6 @@ if (app.Environment.IsDevelopment())
         options.RoutePrefix = "swagger"; 
     });
 }
-
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
