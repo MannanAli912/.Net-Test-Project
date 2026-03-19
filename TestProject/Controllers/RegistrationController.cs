@@ -23,7 +23,6 @@ namespace TestProject.Controllers
             var userId = await _service.ProcessStep1(req);
             return Ok(new { success = true, message = "Personal details saved successfully.", data = new { userId = userId } });
         }
-
         [HttpPost("generate-otp")]
         public async Task<IActionResult> RequestOtp(string ic, string type)
         {
