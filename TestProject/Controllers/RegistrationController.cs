@@ -44,4 +44,5 @@ namespace TestProject.Controllers
             return Ok(new { success = true, message = "Registration completed successfully. You can now login." });
         }
     }
+    
 }
