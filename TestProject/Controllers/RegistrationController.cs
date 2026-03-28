@@ -29,7 +29,6 @@ namespace TestProject.Controllers
             var otp = await _service.GenerateMockOtp(ic, type);
             return Ok(new { success = true, message = $"OTP generated successfully for {type}.", data = new { mockOtp = otp } });
         }
-
         [HttpPost("verify-otp")]
         public async Task<IActionResult> Verify(VerifyOtpRequest req)
         {
